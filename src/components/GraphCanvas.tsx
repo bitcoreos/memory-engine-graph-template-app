@@ -6,11 +6,11 @@ import {
   MiniMap,
   Controls,
   Background,
+  BackgroundVariant,
   useNodesState,
   useEdgesState,
   addEdge,
   Connection,
-  Edge,
 } from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
 
@@ -37,10 +37,11 @@ export default function GraphCanvas() {
         onNodesChange={onNodesChange}
         onEdgesChange={onEdgesChange}
         onConnect={onConnect}
+        fitView
       >
         <Controls />
         <MiniMap />
-        <Background variant={Background.variant.Dots} gap={12} size={1} />
+        <Background variant={BackgroundVariant.Dots} gap={12} size={1} />
       </ReactFlow>
     </div>
   );
